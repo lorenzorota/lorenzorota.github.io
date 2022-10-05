@@ -43,15 +43,16 @@ removeDistractions = () => {
 	} else if (window.location.href.indexOf("/p/") > 0) {
 		hidePostDistractions();
 		hideMenu();
-	} else if (window.location.pathname == "/") {
-		window.location.href = "https://www.instagram.com/direct/inbox/";
 	} else {
 		hideMenu();
 	}
 };
 
-removeDistractions();
-
-// setInterval(function() {
-// 	removeDistractions();
-// }, 1*60);
+interval = setInterval(function() {
+	if (window.location.pathname == "/") {
+		clearInterval(interval);
+		window.location.href = "https://www.instagram.com/direct/inbox/";
+	} else {
+		removeDistractions();
+	}
+}, 1*60);
