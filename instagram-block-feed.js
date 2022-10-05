@@ -8,14 +8,14 @@ hideMenu = () => {
 
 hidePostDistractions = () => {
 	listedLikesBar = document.getElementsByClassName("_ae5m")[0];
-	// tmp = Array.from(document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade"));
 	tmp = document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade");
 
+	// vanilla way because otherwise compatibility issues arise
 	for (i = 0; i < tmp.length; i++) {
-		if (tmp[i].outerHTML.contains("View")) {
-				viewCommentsText = tmp[i];
-			} else if (tmp[i].outerHTML.contains("more")) {
-				moreButton = tmp[i];
+		if (tmp[i].outerHTML.indexOf("View") > 0) {
+			viewCommentsText = tmp[i];
+		} else if (tmp[i].outerHTML.indexOf("more") > 0) {
+			moreButton = tmp[i];
 		}
 	}
 
@@ -24,16 +24,16 @@ hidePostDistractions = () => {
 	commentButton = document.getElementsByClassName("_abl-")[2];
 
 	// change styles
-	// viewCommentsText.style.display = "none";
+	viewCommentsText.style.display = "none";
 	listedLikesBar.style.display = "none";
 	contentCreatorBar.style.display = "none";
 	contentCreatorName.style['pointer-events'] = "none";
 	commentButton.style.display = "none";
 
-	// // perform actions
-	// if (typeof moreButton !== 'undefined') {
- //    	moreButton.click();
-	// }
+	// perform actions
+	if (typeof moreButton !== 'undefined') {
+		moreButton.click();
+	}
 }
 
 removeDistractions = () => {
