@@ -44,8 +44,6 @@ removeDistractions = () => {
 	}
 };
 
-removeDistractions();
-
 setInterval(function() {
-	hideStuff();
+	removeDistractions();
 }, 1*60);
