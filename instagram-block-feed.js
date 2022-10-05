@@ -8,31 +8,31 @@ hideMenu = () => {
 
 hidePostDistractions = () => {
 	listedLikesBar = document.getElementsByClassName("_ae5m")[0];
-	tmp = Array.from(document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade"));
-	viewCommentsText = tmp.find(
-	  e =>
-	    e.outerHTML.contains("View")
-	);
-	moreButton = tmp.find(
-	  e =>
-	    e.outerHTML.contains("more")
-	);
+	// tmp = Array.from(document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade"));
+	// viewCommentsText = tmp.find(
+	//   e =>
+	//     e.outerHTML.contains("View")
+	// );
+	// moreButton = tmp.find(
+	//   e =>
+	//     e.outerHTML.contains("more")
+	// );
 
 	contentCreatorBar = document.getElementsByClassName("_aasi")[0];
 	contentCreatorName = document.getElementsByClassName("_ae5q")[0];
 	commentButton = document.getElementsByClassName("_abl-")[2];
 
 	// change styles
-	viewCommentsText.style.display = "none";
+	// viewCommentsText.style.display = "none";
 	listedLikesBar.style.display = "none";
 	contentCreatorBar.style.display = "none";
 	contentCreatorName.style['pointer-events'] = "none";
 	commentButton.style.display = "none";
 
-	// perform actions
-	if (typeof moreButton !== 'undefined') {
-    	moreButton.click();
-	}
+	// // perform actions
+	// if (typeof moreButton !== 'undefined') {
+ //    	moreButton.click();
+	// }
 }
 
 removeDistractions = () => {
