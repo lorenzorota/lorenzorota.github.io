@@ -41,8 +41,8 @@ removeDistractions = () => {
 		returnButton.style.visibility = "hidden";
 	} else if (window.location.href.indexOf("/direct/t/") > 0) {
 	} else if (window.location.href.indexOf("/p/") > 0) {
-		hidePostDistractions();
 		hideMenu();
+		hidePostDistractions();
 	} else {
 		hideMenu();
 	}
