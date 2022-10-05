@@ -13,10 +13,14 @@ hidePostDistractions = () => {
 	  e =>
 	    e.outerHTML.contains("View")
 	);
+	moreButton = tmp.find(
+	  e =>
+	    e.outerHTML.contains("more")
+	);
+
 	contentCreatorBar = document.getElementsByClassName("_aasi")[0];
 	contentCreatorName = document.getElementsByClassName("_ae5q")[0];
 	commentButton = document.getElementsByClassName("_abl-")[2];
-	moreButton = document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade")[0];
 
 	// change styles
 	viewCommentsText.style.display = "none";
@@ -26,7 +30,9 @@ hidePostDistractions = () => {
 	commentButton.style.display = "none";
 
 	// perform actions
-	moreButton.click();
+	if (typeof moreButton !== 'undefined') {
+    	moreButton.click();
+	}
 }
 
 removeDistractions = () => {
@@ -35,10 +41,10 @@ removeDistractions = () => {
 		returnButton.style.visibility = "hidden";
 	} else if (window.location.href.indexOf("/direct/t/") > 0) {
 	} else if (window.location.href.indexOf("/p/") > 0) {
-		hideMenu();
 		hidePostDistractions();
+		hideMenu();
 	} else if (window.location.pathname == "/") {
-		window.location = "https://www.instagram.com/direct/inbox/";
+		window.location.href = "https://www.instagram.com/direct/inbox/";
 	} else {
 		hideMenu();
 	}
