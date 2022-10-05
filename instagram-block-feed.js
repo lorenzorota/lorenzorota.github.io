@@ -50,6 +50,8 @@ removeDistractions = () => {
 	}
 };
 
-setInterval(function() {
-	removeDistractions();
-}, 1*60);
+removeDistractions();
+
+// setInterval(function() {
+// 	removeDistractions();
+// }, 1*60);
