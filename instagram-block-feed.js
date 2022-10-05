@@ -11,7 +11,7 @@ hidePostDistractions = () => {
 	// tmp = Array.from(document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade"));
 	tmp = document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade");
 
-	for (i = 0; i < t.length; i++) {
+	for (i = 0; i < tmp.length; i++) {
 		if (tmp[i].outerHTML.contains("View")) {
 				viewCommentsText = tmp[i];
 			} else if (tmp[i].outerHTML.contains("more")) {
