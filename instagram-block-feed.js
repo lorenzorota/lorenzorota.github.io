@@ -8,15 +8,13 @@ hideMenu = () => {
 
 hidePostDistractions = () => {
 	listedLikesBar = document.getElementsByClassName("_ae5m")[0];
-	// tmp = Array.from(document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade"));
-	// viewCommentsText = tmp.find(
-	//   e =>
-	//     e.outerHTML.contains("View")
-	// );
-	// moreButton = tmp.find(
-	//   e =>
-	//     e.outerHTML.contains("more")
-	// );
+	tmp = Array.from(document.getElementsByClassName("_aacl _aaco _aacu _aacy _aad6 _aade"));
+	viewCommentsText = tmp.find(
+		e => e.outerHTML.contains("View")
+	);
+	moreButton = tmp.find(
+		e => e.outerHTML.contains("more")
+	);
 
 	contentCreatorBar = document.getElementsByClassName("_aasi")[0];
 	contentCreatorName = document.getElementsByClassName("_ae5q")[0];
